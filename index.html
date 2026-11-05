@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Tạp Hóa Review Đồ Hay — Link Bio</title>
+    <meta name="description" content="Tổng hợp các món đồ hay Tạp Hóa Review Đồ Hay đã soi kỹ — bấm vào là tới thẳng Shopee." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --teal: #0e7c86;
+        --teal-deep: #0a5f67;
+        --teal-soft: #e3f2f3;
+        --yellow: #ffc53d;
+        --yellow-soft: #fff3d1;
+        --ink: #1c2b2c;
+        --ink-soft: #4d6063;
+        --bg: #fdf8ec;
+        --card: #ffffff;
+        --line: #e7ddc4;
+        --red: #d93a2b;
+        --shadow: 0 6px 20px rgba(14, 90, 98, 0.12);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --teal: #2fb3bf;
+          --teal-deep: #7fd4dc;
+          --teal-soft: #123a3f;
+          --yellow: #ffc53d;
+          --yellow-soft: #3d3312;
+          --ink: #eef6f6;
+          --ink-soft: #a9bfc1;
+          --bg: #0d1d1f;
+          --card: #16282b;
+          --line: #2b4448;
+          --red: #ff6a5c;
+          --shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+      .wrap {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 0 16px 40px;
+      }
+
+      /* ---------- Biển hiệu tiệm ---------- */
+      .sign {
+        margin: 18px 0 0;
+        background: var(--teal);
+        border-radius: 18px;
+        padding: 26px 20px 22px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .sign::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 14px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--yellow) 0 28px,
+          #fff 28px 56px
+        );
+        opacity: 0.95;
+      }
+      .sign-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px; height: 64px;
+        margin-top: 8px;
+        border-radius: 50%;
+        background: var(--yellow);
+        border: 3px solid rgba(255, 255, 255, 0.85);
+      }
+      .sign-badge svg { width: 34px; height: 34px; }
+      .sign h1 {
+        margin: 12px 0 6px;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1.2;
+        color: #ffffff;
+        letter-spacing: 0.2px;
+      }
+      .sign p {
+        margin: 0 auto;
+        max-width: 340px;
+        font-size: 13.5px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.92);
+      }
+      @media (prefers-color-scheme: dark) {
+        .sign h1 { color: #08292d; }
+        .sign p { color: rgba(8, 41, 45, 0.85); }
+        .sign { background: var(--yellow); }
+        .sign::before {
+          background: repeating-linear-gradient(90deg, var(--teal) 0 28px, #fff 28px 56px);
+        }
+        .sign-badge { background: var(--teal); border-color: rgba(8, 41, 45, 0.25); }
+      }
+
+      /* ---------- Tìm kiếm + lọc ---------- */
+      .tools {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 14px 0 10px;
+        background: var(--bg);
+      }
+      .search {
+        position: relative;
+      }
+      .search svg {
+        position: absolute;
+        left: 14px; top: 50%;
+        transform: translateY(-50%);
+        width: 20px; height: 20px;
+        color: var(--ink-soft);
+        pointer-events: none;
+      }
+      .search input {
+        width: 100%;
+        padding: 13px 42px 13px 44px;
+        font: inherit;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--ink);
+        background: var(--card);
+        border: 2px solid var(--line);
+        border-radius: 999px;
+        outline: none;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .search input::placeholder { color: var(--ink-soft); }
+      .search input::-webkit-search-cancel-button,
+      .search input::-webkit-search-decoration { -webkit-appearance: none; appearance: none; display: none; }
+      .search input:focus { border-color: var(--teal); }
+      .search .clear {
+        position: absolute;
+        right: 6px; top: 50%;
+        transform: translateY(-50%);
+        width: 32px; height: 32px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--teal-soft);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+        display: none;
+      }
+      .search .clear.show { display: block; }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .chip {
+        flex: 0 0 auto;
+        padding: 8px 16px;
+        font: inherit;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: var(--ink-soft);
+        background: var(--card);
+        border: 2px solid var(--line);
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .chip.active {
+        color: #ffffff;
+        background: var(--teal);
+        border-color: var(--teal);
+      }
+      @media (prefers-color-scheme: dark) {
+        .chip.active { color: #08292d; }
+      }
+
+      .count {
+        margin: 14px 2px 10px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink-soft);
+      }
+
+      /* ---------- Thẻ sản phẩm ---------- */
+      .list { display: flex; flex-direction: column; gap: 16px; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .card-img {
+        position: relative;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        background:
+          radial-gradient(circle at 85% 20%, rgba(255, 197, 61, 0.55), transparent 55%),
+          linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+        color: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        .card-img { color: #08292d; background:
+          radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.35), transparent 55%),
+          linear-gradient(135deg, var(--yellow) 0%, #e8a90c 100%); }
+      }
+      .card-img .big {
+        font-size: 44px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        line-height: 1;
+      }
+      .card-img .small {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        opacity: 0.9;
+      }
+      .card-img .off {
+        position: absolute;
+        top: 12px; right: 12px;
+        background: var(--red);
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 4px 10px;
+        border-radius: 999px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .card-img .off { color: #ffffff; }
+      }
+      .card-body { padding: 16px; }
+      .card-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .code {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        color: var(--teal-deep);
+        background: var(--teal-soft);
+        padding: 3px 9px;
+        border-radius: 6px;
+      }
+      .cat {
+        font-size: 12px;
+        font-weight: 700;
+        color: #7a5b00;
+        background: var(--yellow-soft);
+        padding: 3px 9px;
+        border-radius: 6px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .cat { color: var(--yellow); }
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 16.5px;
+        font-weight: 800;
+        line-height: 1.4;
+      }
+      .price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .price {
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--teal-deep);
+      }
+      .price-note {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--ink-soft);
+      }
+      .buy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 15.5px;
+        font-weight: 800;
+        color: #ffffff;
+        background: var(--teal);
+        border-radius: 12px;
+        text-decoration: none;
+      }
+      .buy:active { background: var(--teal-deep); }
+      .buy svg { width: 18px; height: 18px; flex: 0 0 auto; }
+      @media (prefers-color-scheme: dark) {
+        .buy { color: #08292d; background: var(--yellow); }
+        .buy:active { background: #e8a90c; }
+      }
+
+      .empty {
+        display: none;
+        text-align: center;
+        padding: 36px 20px;
+        background: var(--card);
+        border: 1px dashed var(--line);
+        border-radius: 16px;
+      }
+      .empty.show { display: block; }
+      .empty .t { font-size: 16px; font-weight: 800; margin: 0 0 6px; }
+      .empty .d { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
+
+      /* ---------- Chân trang ---------- */
+      footer {
+        margin-top: 30px;
+        padding: 18px 16px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        font-size: 12.5px;
+        color: var(--ink-soft);
+        text-align: center;
+      }
+      footer .brand {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13.5px;
+        font-weight: 800;
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="sign">
+        <span class="sign-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0a5f67" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7l1.2-3h13.6L20 7" />
+            <path d="M4 7a2.6 2.6 0 0 0 5.2 0A2.6 2.6 0 0 0 14.4 7 2.6 2.6 0 0 0 20 7" />
+            <path d="M5.5 10.5V20h13v-9.5" />
+            <path d="M9.5 20v-5h5v5" />
+          </svg>
+        </span>
+        <h1>Tạp Hóa Review Đồ Hay</h1>
+        <p>Đủ món hay từ công nghệ tới đồ dùng mỗi ngày. Chỉ review món đáng tiền, kèm mã giảm giá mới nhất.</p>
+      </header>
+
+      <div class="tools">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20.5 20.5L16.7 16.7" />
+          </svg>
+          <input id="searchInput" type="search" inputmode="search" placeholder="Tìm món trong tiệm… (vd: bàn phím)" aria-label="Tìm kiếm sản phẩm" autocomplete="off" />
+          <button class="clear" id="clearBtn" type="button" aria-label="Xóa từ khóa tìm kiếm">×</button>
+        </div>
+        <div class="chips" id="chipRow" role="group" aria-label="Lọc theo nhóm sản phẩm"></div>
+      </div>
+
+      <p class="count" id="countText"></p>
+
+      <main class="list" id="productList"></main>
+
+      <div class="empty" id="emptyState">
+        <p class="t">Chưa có món nào khớp</p>
+        <p class="d">Thử gõ từ khóa ngắn hơn, hoặc chọn nhóm “Tất cả” nhé.</p>
+      </div>
+
+      <footer>
+        <span class="brand">Tạp Hóa Review Đồ Hay</span>
+        Trang có dùng link tiếp thị liên kết: bạn mua qua link giá không đổi, trang nhận một phần hoa hồng nhỏ để duy trì nội dung.
+      </footer>
+    </div>
+
+    <script>
+      /* =========================================================
+         DANH SÁCH SẢN PHẨM — thêm món mới: chèn 1 phần tử lên ĐẦU
+         mảng này (món mới nhất luôn nằm trên cùng).
+         - code:     mã bài, khớp sổ theo dõi (B01, B02, ...)
+         - name:     tên sản phẩm + điểm nổi bật
+         - price:    giá hiển thị lúc đăng
+         - discount: nhãn giảm giá (để "" nếu không có)
+         - category: "cong-nghe" hoặc "gia-dung"
+         - url:      link affiliate Shopee
+         - imgBig / imgSmall: chữ trên khối ảnh của thẻ
+         ========================================================= */
+      var PRODUCTS = [
+        {
+          code: "B01",
+          name: "Bàn phím cơ Gaming DAREU EK75 / EK75 Pro — layout 75%, Gasket-Mount, Hotswap, LED RGB",
+          price: "575.000đ",
+          priceNote: "Giá lúc đăng, thay đổi theo đợt sale",
+          discount: "-41%",
+          category: "cong-nghe",
+          url: "https://s.shopee.vn/5VWfGhkbGv",
+          imgBig: "EK75",
+          imgSmall: "DareU · Bàn phím cơ"
+        }
+      ];
+
+      var CATEGORIES = [
+        { id: "all", label: "Tất cả" },
+        { id: "cong-nghe", label: "Công nghệ" },
+        { id: "gia-dung", label: "Gia dụng & đời sống" }
+      ];
+      var CATEGORY_LABELS = { "cong-nghe": "Công nghệ", "gia-dung": "Gia dụng & đời sống" };
+
+      var state = { query: "", category: "all" };
+
+      var listEl = document.getElementById("productList");
+      var emptyEl = document.getElementById("emptyState");
+      var countEl = document.getElementById("countText");
+      var searchEl = document.getElementById("searchInput");
+      var clearBtn = document.getElementById("clearBtn");
+      var chipRow = document.getElementById("chipRow");
+
+      function normalize(str) {
+        return (str || "")
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/đ/g, "d")
+          .replace(/Đ/g, "d");
+      }
+
+      function matches(p) {
+        if (state.category !== "all" && p.category !== state.category) return false;
+        if (!state.query) return true;
+        var hay = normalize(p.name + " " + p.code + " " + (CATEGORY_LABELS[p.category] || ""));
+        return hay.indexOf(normalize(state.query)) !== -1;
+      }
+
+      function cardHtml(p) {
+        var off = p.discount
+          ? '<span class="off">Giảm ' + p.discount.replace("-", "") + "</span>"
+          : "";
+        return (
+          '<article class="card">' +
+            '<div class="card-img" aria-hidden="true">' + off +
+              '<span class="big">' + p.imgBig + "</span>" +
+              '<span class="small">' + p.imgSmall + "</span>" +
+            "</div>" +
+            '<div class="card-body">' +
+              '<div class="card-meta">' +
+                '<span class="code">' + p.code + "</span>" +
+                '<span class="cat">' + (CATEGORY_LABELS[p.category] || "") + "</span>" +
+              "</div>" +
+              "<h2>" + p.name + "</h2>" +
+              '<div class="price-row">' +
+                '<span class="price">' + p.price + "</span>" +
+                '<span class="price-note">' + (p.priceNote || "") + "</span>" +
+              "</div>" +
+              '<a class="buy" href="' + p.url + '" target="_blank" rel="sponsored nofollow noopener">' +
+                "Xem trên Shopee" +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M9 7h8v8"/></svg>' +
+              "</a>" +
+            "</div>" +
+          "</article>"
+        );
+      }
+
+      function render() {
+        var shown = PRODUCTS.filter(matches);
+        listEl.innerHTML = shown.map(cardHtml).join("");
+        emptyEl.classList.toggle("show", shown.length === 0);
+        countEl.textContent =
+          shown.length === PRODUCTS.length
+            ? PRODUCTS.length + " món trong tiệm — mới nhất xếp trên cùng"
+            : "Tìm thấy " + shown.length + " / " + PRODUCTS.length + " món";
+      }
+
+      /* --- Bộ lọc theo nhóm --- */
+      CATEGORIES.forEach(function (c) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "chip" + (c.id === state.category ? " active" : "");
+        b.textContent = c.label;
+        b.setAttribute("data-cat", c.id);
+        b.addEventListener("click", function () {
+          state.category = c.id;
+          var chips = chipRow.querySelectorAll(".chip");
+          for (var i = 0; i < chips.length; i++) {
+            chips[i].classList.toggle("active", chips[i].getAttribute("data-cat") === c.id);
+          }
+          render();
+        });
+        chipRow.appendChild(b);
+      });
+
+      /* --- Tìm kiếm theo thời gian thực --- */
+      searchEl.addEventListener("input", function () {
+        state.query = searchEl.value.trim();
+        clearBtn.classList.toggle("show", state.query.length > 0);
+        render();
+      });
+      clearBtn.addEventListener("click", function () {
+        searchEl.value = "";
+        state.query = "";
+        clearBtn.classList.remove("show");
+        render();
+        searchEl.focus();
+      });
+
+      render();
+    </script>
+  </body>
+</html>
